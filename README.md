@@ -32,11 +32,14 @@ Designed for **absolute beginners**. Even if you've never touched a terminal, we
 
 ### Add the Skill
 
-Inside a Copilot CLI session, run:
+1. Open a Copilot CLI session (run `copilot` in your terminal)
+2. At the `>` prompt, **type** the following slash command (do not paste it into a conversation):
 
 ```
 /skills add DUBSOpenHub/copilot-cli-quickstart
 ```
+
+> **Note:** `/skills add` is a built-in CLI command — it must be entered directly at the prompt, not sent as a chat message.
 
 That's it! One command. You're ready. 🎉
 
