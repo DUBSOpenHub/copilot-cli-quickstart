@@ -1,0 +1,20 @@
+schema_version: "1"
+id: copilot-cli-quickstart
+name: Copilot CLI Quick Start
+description: >
+  Interactive tutor skill that teaches absolute beginners how to use GitHub
+  Copilot CLI. Offers 6 guided lessons covering installation through
+  customization, plus on-demand Q&A for any Copilot CLI question.
+  Say "start tutorial" or ask anything!
+emoji: "🚀"
+codename: The Friendly Terminal Tutor
+category: specialist
+version: "1.0.0"
+tags: [learning, tutorial, quickstart, beginner, copilot-cli, education]
+platforms: [copilot-cli]
+input_format: free-text
+links:
+  agent_file: agents/copilot-cli-quickstart.agent.md
+  skill_file: skills/copilot-cli-quickstart/SKILL.md
+license: MIT
+owner: DUBSOpenHub
