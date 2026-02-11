@@ -132,9 +132,9 @@ copilot-cli-quickstart/
 ├── .github/
 │   ├── ISSUE_TEMPLATE/               ← 🐛 Bug, feature, & lesson templates
 │   ├── PULL_REQUEST_TEMPLATE.md      ← 📝 PR checklist
-│   └── copilot/skills/
+│   └── skills/
 │       └── copilot-cli-quickstart/
-│           └── SKILL.md → (symlink)  ← 🔗 Points to canonical source
+│           └── SKILL.md              ← 🧠 Skill file (required path for /skills add)
 ├── agents/
 │   ├── copilot-cli-quickstart.agent.md  ← 🤖 Agent config
 │   └── copilot-cli-quickstart.md        ← 📋 PRD (Product Requirements Doc)
