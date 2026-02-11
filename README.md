@@ -2,6 +2,9 @@
 
 > **Your friendly terminal tutor** — learn GitHub Copilot CLI by doing, not reading! 🐙✨
 
+<img width="907" height="261" alt="Screenshot 2026-02-11 at 10 34 58 AM" src="https://github.com/user-attachments/assets/5ae4c68a-7794-4a1c-a68e-fc6bfd3a6e69" />
+
+
 [![GitHub](https://img.shields.io/badge/GitHub-Copilot_CLI-blue?logo=github)](https://github.com/features/copilot)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Policy](https://img.shields.io/badge/Security-Policy-brightgreen?logo=github)](SECURITY.md)
