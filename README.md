@@ -12,7 +12,11 @@
 
 **Copilot CLI Quick Start** is a [Copilot CLI skill](https://docs.github.com/copilot/concepts/agents/about-copilot-cli) that teaches you how to use GitHub Copilot CLI — interactively, right inside your terminal. No docs to read. No videos to watch. Just you and a friendly AI tutor that walks you through everything step by step. 🎓
 
-It's designed for **absolute beginners** who've never touched Copilot CLI before. Even if you're new to the terminal, we've got you! 🫶
+It features **two learning tracks** so everyone can learn at their own pace:
+- 🧑‍💻 **Developer Track** — terminal shortcuts, file mentions, custom instructions, MCP, and more
+- 🎨 **Non-Developer Track** — writing, task planning, understanding code, and getting summaries
+
+Designed for **absolute beginners**. Even if you've never touched a terminal, we've got you! 🫶
 
 ---
 
@@ -43,22 +47,34 @@ That's it! One command. You're ready. 🎉
 > start tutorial
 ```
 
-or
+The tutor asks if you're a **Developer** or **Non-Developer**, then walks you through the right lessons:
 
-```
-> teach me copilot cli
-```
-
-The tutor walks you through **6 hands-on lessons** with exercises and check-ins:
+#### 📚 Shared Lessons (Both Tracks)
 
 | # | Lesson | What You'll Learn |
 |---|--------|-------------------|
-| 📦 1 | **Installing & Launching** | Install in one command, launch, and log in |
-| 💬 2 | **Your First Prompt** | Talk to Copilot like a coworker |
-| 🎛️ 3 | **Slash Commands & Modes** | Discover `/` powers and `Shift+Tab` magic |
-| 📎 4 | **Mentioning Files with @** | Point Copilot at specific files |
-| 📋 5 | **Planning with /plan** | Break big tasks into steps before coding |
-| ⚙️ 6 | **Custom Instructions** | Make Copilot work YOUR way |
+| 🏠 S1 | **Welcome & Verify** | Orientation, confirm CLI is working |
+| 💬 S2 | **Your First Prompt** | Talk to Copilot in plain English |
+| 🎮 S3 | **The Permission Model** | YOU are always in control |
+
+#### 🧑‍💻 Developer Track
+
+| # | Lesson | What You'll Learn |
+|---|--------|-------------------|
+| 🎛️ D1 | **Slash Commands & Modes** | `/` powers, `Shift+Tab`, `!` shortcut |
+| 📎 D2 | **File Mentions with @** | Point Copilot at specific files |
+| 📋 D3 | **Planning with /plan** | Break tasks into steps before coding |
+| ⚙️ D4 | **Custom Instructions** | Make Copilot work YOUR way |
+| 🚀 D5 | **Advanced** | MCP servers, skills, models |
+
+#### 🎨 Non-Developer Track
+
+| # | Lesson | What You'll Learn |
+|---|--------|-------------------|
+| 📝 N1 | **Writing & Editing** | Use Copilot as your writing assistant |
+| 📋 N2 | **Task Planning** | Break down projects with /plan |
+| 🔍 N3 | **Understanding Code** | Read code without writing it |
+| 📊 N4 | **Summaries & Extraction** | Get key info from any document |
 
 ### ❓ Q&A Mode — Just Ask!
 
@@ -85,8 +101,24 @@ Ask anything about Copilot CLI and get a clear, beginner-friendly answer with ex
 | 📖 Read long docs | 🎮 Learn by doing |
 | 😰 Intimidating terminal | 🎉 Fun and friendly |
 | 🤷 "Where do I start?" | 📍 Guided step by step |
+| 👤 One-size-fits-all | 🛤️ Dev & Non-Dev tracks |
 | 📝 Take notes | 🧠 Progress tracked for you |
 | 😐 Solo learning | 🤝 Interactive exercises |
+
+---
+
+## 🏗️ Architecture
+
+```mermaid
+flowchart TD
+    USER["👤 User"] --> SKILL["🧠 SKILL.md<br/>Lesson content & rules"]
+    SKILL --> AGENT["🤖 agent.md<br/>Persona & tool config"]
+    AGENT --> SQL["🗄️ SQL<br/>Progress tracking"]
+    AGENT --> DOCS["📚 fetch_docs<br/>Live documentation"]
+    AGENT --> ASK["🙋 ask_user<br/>Interactive exercises"]
+    PRD["📋 PRD<br/>Design & diagrams"] -.-> SKILL
+    CAT["📦 catalog.yml<br/>Metadata"] -.-> SKILL
+```
 
 ---
 
@@ -94,18 +126,26 @@ Ask anything about Copilot CLI and get a clear, beginner-friendly answer with ex
 
 ```
 copilot-cli-quickstart/
-├── .github/copilot/skills/
-│   └── copilot-cli-quickstart/
-│       └── SKILL.md              ← 🧠 The brain — skill definition
+├── .github/
+│   ├── ISSUE_TEMPLATE/               ← 🐛 Bug, feature, & lesson templates
+│   ├── PULL_REQUEST_TEMPLATE.md      ← 📝 PR checklist
+│   └── copilot/skills/
+│       └── copilot-cli-quickstart/
+│           └── SKILL.md → (symlink)  ← 🔗 Points to canonical source
 ├── agents/
 │   ├── copilot-cli-quickstart.agent.md  ← 🤖 Agent config
 │   └── copilot-cli-quickstart.md        ← 📋 PRD (Product Requirements Doc)
 ├── skills/
 │   └── copilot-cli-quickstart/
-│       ├── SKILL.md              ← 📚 Canonical skill file
-│       └── catalog.yml           ← 📋 Metadata for Camp Air catalog
-├── LICENSE
+│       ├── SKILL.md              ← 🧠 The brain — canonical skill source
+│       └── catalog.yml           ← 📋 Camp Air catalog metadata
+├── .gitignore
+├── CHANGELOG.md                  ← 📋 Version history
+├── CODE_OF_CONDUCT.md            ← 🤝 Contributor Covenant
+├── CONTRIBUTING.md               ← 🛠️ How to contribute
+├── LICENSE                       ← 📄 MIT
 ├── SECURITY.md                   ← 🔒 Security policy
+├── TESTING.md                    ← 🧪 Conversation playbooks & QA
 └── README.md                     ← 👋 You are here!
 ```
 
@@ -121,19 +161,15 @@ This repo has **Dependabot alerts** and **automated security updates** enabled. 
 
 ## 🤝 Contributing
 
-Got ideas to make this tutor even better? 🎨
+Got ideas to make this tutor even better? 🎨 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide!
 
-1. **Fork** this repo
-2. **Create a branch** (`git checkout -b my-improvement`)
-3. **Make your changes** — maybe add a lesson, improve an exercise, or fix a typo!
-4. **Open a PR** — we love PRs! 💜
+**Quick ways to help:**
+- 🐛 [Report a bug](https://github.com/DUBSOpenHub/copilot-cli-quickstart/issues/new?template=bug_report.md)
+- 💡 [Suggest a feature](https://github.com/DUBSOpenHub/copilot-cli-quickstart/issues/new?template=feature_request.md)
+- 📚 [Propose a lesson](https://github.com/DUBSOpenHub/copilot-cli-quickstart/issues/new?template=lesson_idea.md)
+- ✏️ Fix a typo — just open a PR!
 
-### Ideas for Contributions
-
-- 🆕 Additional lessons (MCP servers, agent mode, etc.)
-- 🌍 Translations for non-English speakers
-- 🎯 More interactive exercises
-- 🐛 Bug fixes and improvements
+See [TESTING.md](TESTING.md) for conversation playbooks and QA checklists.
 
 ---
 
