@@ -4,6 +4,7 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-Copilot_CLI-blue?logo=github)](https://github.com/features/copilot)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Security Policy](https://img.shields.io/badge/Security-Policy-brightgreen?logo=github)](SECURITY.md)
 
 ---
 
@@ -97,14 +98,24 @@ copilot-cli-quickstart/
 │   └── copilot-cli-quickstart/
 │       └── SKILL.md              ← 🧠 The brain — skill definition
 ├── agents/
-│   └── copilot-cli-quickstart.agent.md  ← 🤖 Agent config
+│   ├── copilot-cli-quickstart.agent.md  ← 🤖 Agent config
+│   └── copilot-cli-quickstart.md        ← 📋 PRD (Product Requirements Doc)
 ├── skills/
 │   └── copilot-cli-quickstart/
 │       ├── SKILL.md              ← 📚 Canonical skill file
 │       └── catalog.yml           ← 📋 Metadata for Camp Air catalog
 ├── LICENSE
+├── SECURITY.md                   ← 🔒 Security policy
 └── README.md                     ← 👋 You are here!
 ```
+
+---
+
+## 🔒 Security
+
+See [SECURITY.md](SECURITY.md) for our security policy and how to report vulnerabilities.
+
+This repo has **Dependabot alerts** and **automated security updates** enabled. 🛡️
 
 ---
 

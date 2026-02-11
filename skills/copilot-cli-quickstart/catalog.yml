@@ -14,6 +14,7 @@ tags: [learning, tutorial, quickstart, beginner, copilot-cli, education]
 platforms: [copilot-cli]
 input_format: free-text
 links:
+  prd: agents/copilot-cli-quickstart.md
   agent_file: agents/copilot-cli-quickstart.agent.md
   skill_file: skills/copilot-cli-quickstart/SKILL.md
 license: MIT
