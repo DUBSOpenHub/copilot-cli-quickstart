@@ -9,7 +9,7 @@ description: >
 emoji: "🚀"
 codename: The Friendly Terminal Tutor
 category: specialist
-version: "1.0.0"
+version: "1.1.0"
 tags: [learning, tutorial, quickstart, beginner, copilot-cli, education]
 platforms: [copilot-cli]
 input_format: free-text

@@ -148,26 +148,28 @@ flowchart TD
 ```
 copilot-cli-quickstart/
 ├── .github/
-│   ├── ISSUE_TEMPLATE/               ← 🐛 Bug, feature, & lesson templates
-│   ├── PULL_REQUEST_TEMPLATE.md      ← 📝 PR checklist
+│   ├── CODEOWNERS                        ← 👑 Code ownership rules
+│   ├── ISSUE_TEMPLATE/                   ← 🐛 Bug, feature, & lesson templates
+│   ├── PULL_REQUEST_TEMPLATE.md          ← 📝 PR checklist
+│   ├── dependabot.yml                    ← 🤖 Automated dependency updates
 │   └── skills/
 │       └── copilot-cli-quickstart/
-│           └── SKILL.md              ← 🧠 Skill file (required path for /skills add)
+│           └── SKILL.md                  ← 🧠 Skill file (required path for /skills add)
 ├── agents/
-│   ├── copilot-cli-quickstart.agent.md  ← 🤖 Agent config
-│   └── copilot-cli-quickstart.md        ← 📋 PRD (Product Requirements Doc)
+│   ├── copilot-cli-quickstart.agent.md   ← 🤖 Agent config
+│   └── copilot-cli-quickstart.md         ← 📋 PRD (Product Requirements Doc)
 ├── skills/
 │   └── copilot-cli-quickstart/
-│       ├── SKILL.md              ← 🧠 The brain — canonical skill source
-│       └── catalog.yml           ← 📋 Camp Air catalog metadata
+│       ├── SKILL.md                      ← 🧠 The brain — canonical skill source
+│       └── catalog.yml                   ← 📋 Camp Air catalog metadata
 ├── .gitignore
-├── CHANGELOG.md                  ← 📋 Version history
-├── CODE_OF_CONDUCT.md            ← 🤝 Contributor Covenant
-├── CONTRIBUTING.md               ← 🛠️ How to contribute
-├── LICENSE                       ← 📄 MIT
-├── SECURITY.md                   ← 🔒 Security policy
-├── TESTING.md                    ← 🧪 Conversation playbooks & QA
-└── README.md                     ← 👋 You are here!
+├── CHANGELOG.md                          ← 📋 Version history
+├── CODE_OF_CONDUCT.md                    ← 🤝 Contributor Covenant
+├── CONTRIBUTING.md                       ← 🛠️ How to contribute
+├── LICENSE                               ← 📄 MIT
+├── SECURITY.md                           ← 🔒 Security policy
+├── TESTING.md                            ← 🧪 Conversation playbooks & QA
+└── README.md                             ← 👋 You are here!
 ```
 
 ---
