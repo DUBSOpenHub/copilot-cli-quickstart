@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- 🔧 Top troubleshooting section in README covering:
+  - Skill add/install issues
+  - Authentication and subscription problems
+  - Permission prompts explanation (Allow/Deny/Allow for session)
+  - File mention `@` autocomplete issues
+  - Windows shell gotchas
+- 🛟 Lesson fallback handling in SKILL.md for early lessons (S1-S3):
+  - S1: Fallbacks for `/help` issues, authentication, and subscription problems
+  - S2: Fallbacks for directory/file issues, permission confusion, and @-mention problems
+  - S3: Fallbacks for permission model confusion and accidental actions
+- 🤝 Beginner-friendly troubleshooting with clarifying questions using `ask_user`
+- ✅ Actionable next steps and safe commands in all fallback paths
+
 ## [1.1.0] - 2026-02-11
 
 ### Added
