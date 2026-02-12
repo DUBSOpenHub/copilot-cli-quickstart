@@ -32,16 +32,31 @@ Designed for **absolute beginners**. Even if you've never touched a terminal, we
 
 ### Add the Skill
 
-1. Open a Copilot CLI session (run `copilot` in your terminal)
-2. At the `>` prompt, **type** the following slash command (do not paste it into a conversation):
+#### Option A: Personal Skill (works everywhere) ⭐ Recommended
 
+Clone the repo and copy the skill to your personal skills directory:
+
+```bash
+git clone https://github.com/DUBSOpenHub/copilot-cli-quickstart-campair.git
+mkdir -p ~/.copilot/skills
+cp -r copilot-cli-quickstart-campair/.github/skills/copilot-cli-quickstart ~/.copilot/skills/
 ```
-/skills add DUBSOpenHub/copilot-cli-quickstart-campair
+
+Then in a Copilot CLI session, run `/skills reload` to pick it up.
+
+#### Option B: Project Skill (auto-discovered)
+
+Clone the repo and start Copilot CLI from inside it:
+
+```bash
+git clone https://github.com/DUBSOpenHub/copilot-cli-quickstart-campair.git
+cd copilot-cli-quickstart-campair
+copilot
 ```
 
-> **Note:** `/skills add` is a built-in CLI command — it must be entered directly at the prompt, not sent as a chat message.
+The skill at `.github/skills/copilot-cli-quickstart/` is automatically discovered.
 
-That's it! One command. You're ready. 🎉
+That's it! You're ready. 🎉
 
 ---
 
@@ -169,12 +184,12 @@ This repo has **Dependabot alerts** and **automated security updates** enabled. 
 
 ### 🚨 Skill Add Issues
 
-**Symptom:** `/skills add DUBSOpenHub/copilot-cli-quickstart-campair` doesn't work or gives an error.
+**Symptom:** Skill doesn't appear in `/skills list` or isn't activating.
 
 **Fixes:**
-- ✅ **Type, don't paste** — `/skills add` is a slash command and must be typed at the `>` prompt, not pasted into a conversation. Start typing `/skills` and it should autocomplete.
-- ✅ **Check your context** — You must be at the main Copilot CLI prompt (not inside another skill or agent). Type `/clear` to reset if needed.
-- ✅ **Verify CLI version** — Run `copilot --version` outside the CLI session. Skills require Copilot CLI v1.8.0+. Update if needed: `brew upgrade copilot-cli` or `npm update -g @github/copilot`.
+- ✅ **Check skill location** — The `SKILL.md` file must be in either `~/.copilot/skills/copilot-cli-quickstart/SKILL.md` (personal) or `.github/skills/copilot-cli-quickstart/SKILL.md` (project, auto-discovered when you `cd` into the repo).
+- ✅ **Reload skills** — Run `/skills reload` in your Copilot CLI session after copying files.
+- ✅ **Verify CLI version** — Run `copilot --version` outside the CLI session. Update if needed: `brew upgrade copilot-cli` or `npm update -g @github/copilot`.
 
 ---
 
