@@ -36,7 +36,7 @@ Designed for **absolute beginners**. Even if you've never touched a terminal, we
 2. At the `>` prompt, **type** the following slash command (do not paste it into a conversation):
 
 ```
-/skills add DUBSOpenHub/copilot-cli-quickstart
+/skills add DUBSOpenHub/copilot-cli-quickstart-campair
 ```
 
 > **Note:** `/skills add` is a built-in CLI command — it must be entered directly at the prompt, not sent as a chat message.
@@ -169,7 +169,7 @@ This repo has **Dependabot alerts** and **automated security updates** enabled. 
 
 ### 🚨 Skill Add Issues
 
-**Symptom:** `/skills add DUBSOpenHub/copilot-cli-quickstart` doesn't work or gives an error.
+**Symptom:** `/skills add DUBSOpenHub/copilot-cli-quickstart-campair` doesn't work or gives an error.
 
 **Fixes:**
 - ✅ **Type, don't paste** — `/skills add` is a slash command and must be typed at the `>` prompt, not pasted into a conversation. Start typing `/skills` and it should autocomplete.
@@ -229,9 +229,9 @@ This repo has **Dependabot alerts** and **automated security updates** enabled. 
 Got ideas to make this tutor even better? 🎨 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide!
 
 **Quick ways to help:**
-- 🐛 [Report a bug](https://github.com/DUBSOpenHub/copilot-cli-quickstart/issues/new?template=bug_report.md)
-- 💡 [Suggest a feature](https://github.com/DUBSOpenHub/copilot-cli-quickstart/issues/new?template=feature_request.md)
-- 📚 [Propose a lesson](https://github.com/DUBSOpenHub/copilot-cli-quickstart/issues/new?template=lesson_idea.md)
+- 🐛 [Report a bug](https://github.com/DUBSOpenHub/copilot-cli-quickstart-campair/issues/new?template=bug_report.md)
+- 💡 [Suggest a feature](https://github.com/DUBSOpenHub/copilot-cli-quickstart-campair/issues/new?template=feature_request.md)
+- 📚 [Propose a lesson](https://github.com/DUBSOpenHub/copilot-cli-quickstart-campair/issues/new?template=lesson_idea.md)
 - ✏️ Fix a typo — just open a PR!
 
 See [TESTING.md](TESTING.md) for conversation playbooks and QA checklists.
