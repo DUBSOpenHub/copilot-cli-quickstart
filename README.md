@@ -37,9 +37,9 @@ Designed for **absolute beginners**. Even if you've never touched a terminal, we
 Clone the repo and copy the skill to your personal skills directory:
 
 ```bash
-git clone https://github.com/DUBSOpenHub/copilot-cli-quickstart-campair.git
+git clone https://github.com/DUBSOpenHub/copilot-cli-quickstart.git
 mkdir -p ~/.copilot/skills
-cp -r copilot-cli-quickstart-campair/.github/skills/copilot-cli-quickstart ~/.copilot/skills/
+cp -r copilot-cli-quickstart/.github/skills/copilot-cli-quickstart ~/.copilot/skills/
 ```
 
 Then in a Copilot CLI session, run `/skills reload` to pick it up.
@@ -49,8 +49,8 @@ Then in a Copilot CLI session, run `/skills reload` to pick it up.
 Clone the repo and start Copilot CLI from inside it:
 
 ```bash
-git clone https://github.com/DUBSOpenHub/copilot-cli-quickstart-campair.git
-cd copilot-cli-quickstart-campair
+git clone https://github.com/DUBSOpenHub/copilot-cli-quickstart.git
+cd copilot-cli-quickstart
 copilot
 ```
 
@@ -244,9 +244,9 @@ This repo has **Dependabot alerts** and **automated security updates** enabled. 
 Got ideas to make this tutor even better? 🎨 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide!
 
 **Quick ways to help:**
-- 🐛 [Report a bug](https://github.com/DUBSOpenHub/copilot-cli-quickstart-campair/issues/new?template=bug_report.md)
-- 💡 [Suggest a feature](https://github.com/DUBSOpenHub/copilot-cli-quickstart-campair/issues/new?template=feature_request.md)
-- 📚 [Propose a lesson](https://github.com/DUBSOpenHub/copilot-cli-quickstart-campair/issues/new?template=lesson_idea.md)
+- 🐛 [Report a bug](https://github.com/DUBSOpenHub/copilot-cli-quickstart/issues/new?template=bug_report.md)
+- 💡 [Suggest a feature](https://github.com/DUBSOpenHub/copilot-cli-quickstart/issues/new?template=feature_request.md)
+- 📚 [Propose a lesson](https://github.com/DUBSOpenHub/copilot-cli-quickstart/issues/new?template=lesson_idea.md)
 - ✏️ Fix a typo — just open a PR!
 
 See [TESTING.md](TESTING.md) for conversation playbooks and QA checklists.

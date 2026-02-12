@@ -61,6 +61,7 @@ You don't need to write code to help. Open an [Issue](https://github.com/DUBSOpe
 - 🎯 **One concept per lesson** — don't overwhelm
 - ❌ **Never fabricate** — link to real docs
 - 🧪 **Test your changes** — run through the conversation flow
+- 🔄 **Keep SKILL.md in sync** — the skill file exists in two locations (`skills/copilot-cli-quickstart/SKILL.md` and `.github/skills/copilot-cli-quickstart/SKILL.md`). If you edit one, copy the changes to the other so they stay identical.
 
 ## 📋 Pull Request Guidelines
 
