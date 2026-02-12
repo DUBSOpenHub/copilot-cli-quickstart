@@ -165,6 +165,65 @@ This repo has **Dependabot alerts** and **automated security updates** enabled. 
 
 ---
 
+## 🔧 Top Troubleshooting
+
+### 🚨 Skill Add Issues
+
+**Symptom:** `/skills add DUBSOpenHub/copilot-cli-quickstart` doesn't work or gives an error.
+
+**Fixes:**
+- ✅ **Type, don't paste** — `/skills add` is a slash command and must be typed at the `>` prompt, not pasted into a conversation. Start typing `/skills` and it should autocomplete.
+- ✅ **Check your context** — You must be at the main Copilot CLI prompt (not inside another skill or agent). Type `/clear` to reset if needed.
+- ✅ **Verify CLI version** — Run `copilot --version` outside the CLI session. Skills require Copilot CLI v1.8.0+. Update if needed: `brew upgrade copilot-cli` or `npm update -g @github/copilot`.
+
+---
+
+### 🔐 Authentication / Subscription Issues
+
+**Symptom:** "Copilot not enabled" or authentication errors when trying to use the CLI.
+
+**Fixes:**
+- ✅ **Verify subscription** — Check [github.com/settings/copilot](https://github.com/settings/copilot) to confirm you have an active Copilot subscription (Individual, Business, or Enterprise).
+- ✅ **Re-authenticate** — Run `copilot auth logout` then `copilot auth login` outside the CLI session. Follow the browser login flow.
+- ✅ **Check permissions** — For organizations, confirm your org admin has enabled Copilot for your account. Check with your GitHub admin if unsure.
+
+---
+
+### 🛡️ Permission Prompts Confusion
+
+**Symptom:** Copilot keeps asking "Allow", "Deny", or "Allow for session" and I'm not sure which to choose.
+
+**Explanation:**
+- ✅ **Allow** — Copilot performs this action once, then asks again next time.
+- ❌ **Deny** — Copilot won't do this action. Totally safe! Nothing bad happens if you deny.
+- 🔄 **Allow for session** — Copilot can do this type of action for the rest of this session without asking again. Use this to speed up repetitive tasks (e.g., if it's creating multiple files).
+
+**Pro tip:** When learning, use "Allow" (not "Allow for session") so you see what Copilot does each time. You can always deny — Copilot respects your choice! 🎮
+
+---
+
+### 📎 File Mention `@` Not Autocompleting
+
+**Symptom:** Typing `@` doesn't show files or autocomplete doesn't work.
+
+**Fixes:**
+- ✅ **Be in a directory with files** — File mentions (`@filename`) only work when you're in a directory that contains files. Navigate to a project folder first: `cd ~/my-project`.
+- ✅ **Use full paths if needed** — If autocomplete isn't working, type the full path: `@/path/to/file.js` or `@./relative/file.js`.
+- ✅ **Check Copilot CLI version** — File mentions require Copilot CLI v1.5.0+. Run `copilot --version` to check.
+
+---
+
+### 🪟 Windows Shell Gotchas
+
+**Symptom:** Commands don't work as expected on Windows.
+
+**Fixes:**
+- ✅ **Use PowerShell or Windows Terminal** — Copilot CLI works best with PowerShell 7+ or Windows Terminal (not legacy cmd.exe).
+- ✅ **Path separators** — Use forward slashes `/` or escape backslashes `\\` in paths. Copilot CLI normalizes paths, but Windows tools may be picky.
+- ✅ **Run as user (not admin)** — Run Copilot CLI as your regular user. Admin mode can cause permission issues with Git and npm.
+
+---
+
 ## 🤝 Contributing
 
 Got ideas to make this tutor even better? 🎨 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide!

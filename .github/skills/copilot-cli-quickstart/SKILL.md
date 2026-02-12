@@ -165,6 +165,30 @@ Did you see a list of commands?"
 choices: ["✅ Yes! I see all the commands!", "🤔 Something looks different than expected", "❓ What am I looking at?"]
 ```
 
+**Fallback Handling:**
+
+If user selects "🤔 Something looks different than expected":
+```
+Use ask_user:
+"No worries! Let's troubleshoot. What did you see?
+1. Nothing happened when I typed /help
+2. I see an error message
+3. The command isn't recognized
+4. Something else"
+```
+
+- **If /help doesn't work:** "Hmm, that's unusual! Are you at the main Copilot CLI prompt (you should see a `>`)? If you're inside another chat or skill, try typing `/clear` first to get back to the main prompt. Then try `/help` again. Let me know what happens! 🔍"
+
+- **If authentication issues:** "It sounds like there might be an authentication issue. Can you try these steps outside the CLI session?
+  1. Run: `copilot auth logout`
+  2. Run: `copilot auth login` and follow the browser login flow
+  3. Come back and we'll continue! ✅"
+
+- **If subscription issues:** "It looks like Copilot might not be enabled for your account. Check [github.com/settings/copilot](https://github.com/settings/copilot) to confirm you have an active subscription. If you're in an organization, your admin needs to enable it for you. Once that's sorted, come back and we'll keep going! 🚀"
+
+If user selects "❓ What am I looking at?":
+"Great question! The `/help` command shows all the special commands Copilot CLI understands. Things like `/clear` to start fresh, `/plan` to make a plan before coding, `/compact` to condense the conversation — lots of goodies! Don't worry about memorizing them all. We'll explore them step by step. Ready to continue? 🎓"
+
 ---
 
 ## 💬 Lesson S2: Your First Prompt
@@ -200,6 +224,32 @@ What happened?"
 choices: ["✅ It created the file! So cool!", "🤔 It asked me something and I wasn't sure what to do", "❌ Something unexpected happened"]
 ```
 
+**Fallback Handling:**
+
+If user selects "🤔 It asked me something and I wasn't sure what to do":
+"That's totally normal! Copilot asks permission before doing things. You probably saw choices like 'Allow', 'Deny', or 'Allow for session'. Here's what they mean:
+- ✅ **Allow** — Do it this time (and ask again next time)
+- ❌ **Deny** — Don't do it (nothing bad happens!)
+- 🔄 **Allow for session** — Do it now and don't ask again this session
+
+When learning, I recommend using 'Allow' so you see each step. Ready to try again? 🎯"
+
+If user selects "❌ Something unexpected happened":
+```
+Use ask_user:
+"No problem! Let's figure it out. What did you see?
+1. An error message about files or directories
+2. Nothing happened at all
+3. It did something different than I expected
+4. Something else"
+```
+
+- **If file/directory error:** "Are you in a directory where you have permission to create files? Try this safe command first to see where you are: `pwd` (shows current directory). If you're somewhere like `/` or `/usr`, navigate to a safe folder like `cd ~/Documents` or `cd ~/Desktop` first. Then try creating the file again! 📂"
+
+- **If @-mention issues:** "If you were trying to mention a file with `@`, make sure you're in a directory that has files! Navigate to a project folder first: `cd ~/my-project`. Then `@` will autocomplete your files. 📎"
+
+- **If nothing happened:** "Hmm! Try typing your prompt again and look for Copilot's response. Sometimes responses can scroll up. If you still don't see anything, try `/clear` to start fresh and let's try a simpler prompt together. 🔍"
+
 ---
 
 ## 🎮 Lesson S3: The Permission Model
@@ -230,6 +280,27 @@ Use ask_user:
 Did it respect your decision?"
 choices: ["✅ It asked and I denied — nothing happened!", "😰 That was scary but it worked!", "🤔 Something else happened"]
 ```
+
+**Fallback Handling:**
+
+If user selects "😰 That was scary but it worked!":
+"I hear you! But here's the key: **you** had the power the whole time! 💪 Copilot suggested something potentially destructive, but it asked you first. When you said 'Deny', it listened. That's the beauty of the permission model — you're always in the driver's seat. Nothing happens without your approval. Feel more confident now? 🎮"
+
+If user selects "🤔 Something else happened":
+```
+Use ask_user:
+"No worries! What happened?
+1. It didn't ask me for permission
+2. I accidentally allowed it and now files are gone
+3. I'm confused about what 'Allow for session' means
+4. Something else"
+```
+
+- **If didn't ask permission:** "That's unusual! Copilot should always ask before destructive actions. Did you perhaps select 'Allow for session' earlier for file operations? If so, that setting stays active until you exit. You can always press `ctrl+c` to cancel an action in progress. Want to try another safe experiment? 🧪"
+
+- **If accidentally allowed:** "Oof! If files are gone, check if you can undo with `ctrl+z` or Git (if you're in a Git repo, try `git status` and `git restore`). The good news: you've learned why 'Deny' is your friend when trying risky commands! 🛡️ For learning, always deny destructive commands. Ready to move forward?"
+
+- **If confused about 'Allow for session':** "Great question! 'Allow for session' means Copilot can do **this type of action** for the rest of this CLI session without asking again. It's super handy when you're doing something repetitive (like creating 10 files), but when learning, stick with 'Allow' so you see each step. You can always deny — it's totally safe! 🎯"
 
 Celebrate: "See? YOU are always in control! 🎮 Copilot never does anything without your permission."
 
