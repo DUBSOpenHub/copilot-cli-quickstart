@@ -9,6 +9,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Policy](https://img.shields.io/badge/Security-Policy-brightgreen?logo=github)](SECURITY.md)
 
+> ⚡ **Get started fast!** Copy this right into the [Copilot CLI](https://github.com/github/copilot-cli):
+> ```
+> /skills add DUBSOpenHub/copilot-cli-quickstart
+> ```
+
 ---
 
 ## 🤔 What Is This?
@@ -265,4 +270,4 @@ See [TESTING.md](TESTING.md) for conversation playbooks and QA checklists.
 
 Made with 💜 by [DUBSOpenHub](https://github.com/DUBSOpenHub) to help more people discover the joy of GitHub Copilot CLI.
 
-**Happy learning!** 🚀✨
+**Happy building!** 🚀✨
