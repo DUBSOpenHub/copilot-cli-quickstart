@@ -9,10 +9,29 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Policy](https://img.shields.io/badge/Security-Policy-brightgreen?logo=github)](SECURITY.md)
 
-> ⚡ **Get started fast!** Copy this right into the [Copilot CLI](https://github.com/github/copilot-cli):
+> ### ⚡ Zero to Running in 60 Seconds
+>
+> Paste this into your terminal — it installs the CLI if needed, then launches it:
+> ```bash
+> command -v copilot >/dev/null 2>&1 || brew install copilot-cli && copilot
+> ```
+> <details><summary>Not using Homebrew?</summary>
+>
+> ```bash
+> # macOS / Linux (no Homebrew)
+> command -v copilot >/dev/null 2>&1 || curl -fsSL https://gh.io/copilot-install | bash && copilot
+>
+> # Windows (WinGet + PowerShell)
+> if (-not (Get-Command copilot -ErrorAction SilentlyContinue)) { winget install GitHub.Copilot }; copilot
+> ```
+> </details>
+>
+> Then paste this inside the CLI and say **"start tutorial"** 🎓:
 > ```
 > /skills add DUBSOpenHub/copilot-cli-quickstart
 > ```
+>
+> *Requires an active [Copilot subscription](https://github.com/features/copilot/plans).*
 
 ---
 
