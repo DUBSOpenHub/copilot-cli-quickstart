@@ -22,7 +22,7 @@
 > ```bash
 > curl -fsSL https://raw.githubusercontent.com/DUBSOpenHub/copilot-cli-quickstart/main/quickstart.sh | bash
 > ```
-> That's the whole install. It downloads the CLI, adds the skill, and launches everything for you.
+> *Already have the CLI? No worries — this detects it and skips straight to adding the skill.*
 >
 > **3. When Copilot opens, type:** `start tutorial`
 >
