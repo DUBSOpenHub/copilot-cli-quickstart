@@ -9,27 +9,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Policy](https://img.shields.io/badge/Security-Policy-brightgreen?logo=github)](SECURITY.md)
 
-> ### ⚡ Zero to Running in 60 Seconds
+> ### ⚡ One Command. That's It.
 >
-> Paste this into your terminal — it installs the CLI if needed, then launches it:
+> Open your terminal and paste this — it handles everything:
 > ```bash
-> command -v copilot >/dev/null 2>&1 || brew install copilot-cli && copilot
+> curl -fsSL https://raw.githubusercontent.com/DUBSOpenHub/copilot-cli-quickstart/main/quickstart.sh | bash
 > ```
-> <details><summary>Not using Homebrew?</summary>
->
-> ```bash
-> # macOS / Linux (no Homebrew)
-> command -v copilot >/dev/null 2>&1 || curl -fsSL https://gh.io/copilot-install | bash && copilot
->
-> # Windows (WinGet + PowerShell)
-> if (-not (Get-Command copilot -ErrorAction SilentlyContinue)) { winget install GitHub.Copilot }; copilot
-> ```
-> </details>
->
-> Then paste this inside the CLI and say **"start tutorial"** 🎓:
-> ```
-> /skills add DUBSOpenHub/copilot-cli-quickstart
-> ```
+> It installs the CLI (if needed), adds the skill, and launches Copilot.
+> Just type **"start tutorial"** when it opens. 🎓
 >
 > *Requires an active [Copilot subscription](https://github.com/features/copilot/plans).*
 
