@@ -63,4 +63,4 @@ echo "   Just type: start tutorial"
 echo "─────────────────────────────────────────"
 echo ""
 
-exec copilot
+exec copilot < /dev/tty
