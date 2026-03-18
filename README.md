@@ -11,14 +11,24 @@
 
 > ### ⚡ One Command. That's It.
 >
-> Open your terminal and paste this — it handles everything:
+> **Never used the CLI before? No problem.** Follow these 3 steps:
+>
+> **1. Open your terminal**
+> - 🍎 **Mac:** Press `⌘ + Space`, type **Terminal**, hit Enter
+> - 🪟 **Windows:** Press `Win + X`, choose **Terminal** or **PowerShell**
+> - 🐧 **Linux:** Press `Ctrl + Alt + T`
+>
+> **2. Paste this line and press Enter:**
 > ```bash
 > curl -fsSL https://raw.githubusercontent.com/DUBSOpenHub/copilot-cli-quickstart/main/quickstart.sh | bash
 > ```
-> It installs the CLI (if needed), adds the skill, and launches Copilot.
-> Just type **"start tutorial"** when it opens. 🎓
+> That's the whole install. It downloads the CLI, adds the skill, and launches everything for you.
 >
-> *Requires an active [Copilot subscription](https://github.com/features/copilot/plans).*
+> **3. When Copilot opens, type:** `start tutorial`
+>
+> That's it — you're learning! 🎓
+>
+> *Requires an active [Copilot subscription](https://github.com/features/copilot/plans). [Get one here →](https://github.com/features/copilot/plans)*
 
 ---
 
