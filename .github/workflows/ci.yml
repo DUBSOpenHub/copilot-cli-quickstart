@@ -1,0 +1,19 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - name: Shell syntax check
+        run: bash -n quickstart.sh
+      - name: ShellCheck
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq shellcheck && shellcheck -S warning quickstart.sh
+      - name: Verify skill frontmatter
+        run: find skills -name SKILL.md -exec head -1 {} \; | grep -q '^---'
